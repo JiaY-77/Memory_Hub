@@ -23,5 +23,19 @@
     // --- 测试框架配置 (如果未来你想写测试) ---
     "python.testing.pytestEnabled": true,  // 启用pytest测试框架[reference:11][reference:12]
     "python.testing.unittestEnabled": false, // 禁用unittest框架[reference:13]
-    "python.testing.pytestArgs": ["tests"] // 指定pytest扫描的测试目录[reference:14]
+    "python.testing.pytestArgs": ["tests"], // 指定pytest扫描的测试目录[reference:14]
+
+    // --- indentRainbow颜色设置
+    "indentRainbow.colors": [
+        "rgba(255, 200, 100, 0.3)",   // 第一级缩进：淡橙色
+        "rgba(100, 200, 255, 0.3)",   // 第二级：淡蓝色
+        "rgba(200, 100, 255, 0.3)",   // 第三级：淡紫色
+        "rgba(100, 255, 150, 0.3)"    // 第四级：淡绿色
+    ],
+    "indentRainbow.errorColor": "rgba(255, 80, 80, 0.4)",   // 缩进错误（不是 tabSize 整数倍）
+    "indentRainbow.tabmixColor": "rgba(255, 160, 0, 0.5)",  // 混用空格和制表符
+    "indentRainbow.updateDelay": 100   // 更新延迟，越小反应越快
+
+
+
 }
