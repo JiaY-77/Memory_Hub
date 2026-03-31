@@ -26,13 +26,21 @@ class MemoryHub:
 
     def find_messages(self, keyword):
         cursor = self.conn.cursor()
-        cursor.execute("""
+        cursor.execute(
+            """
             SELECT id, role, content, timestamp
             FROM messages
             WHERE LOWER(content) LIKE LOWER(?)
             ORDER BY timestamp DESC
-        """, ('%' + keyword + '%',))
-        results = cursor.fetchall()
+        """,
+            ("%" + keyword + "%",),
+        )
+        rows = cursor.fetchall()
+        results = []
+        for row in rows:
+            results.append(
+                {"id": row[0], "role": row[1], "content": row[2], "timestamp": row[3]}
+            )
         return results
 
     # def add_message(self, role, content):
