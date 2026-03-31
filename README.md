@@ -20,6 +20,53 @@
 
 ## 快速开始
 
-### 安装依赖
+### 环境要求
+- Python 3.8+
+- 无需额外依赖（仅用标准库）
+
+### 安装与运行
+
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/你的用户名/Memory_Hub.git
+cd Memory_Hub
+python memory_hub.py
+```
+
+### 基本使用
+
+```python
+
+from memory_hub import MemoryHub
+
+hub = MemoryHub("my_memory.json")
+hub.add_message("user", "我喜欢晴天")
+hub.add_message("assistant", "那我们去海边吧")
+# 查找功能（待实现）
+# results = hub.find_messages("晴天")
+```
+
+## 技术栈
+- Python 3
+
+- JSON 文件存储（后续将支持 SQLite / 向量库）
+
+- Git 版本控制
+
+## 项目结构
+
+Memory_Hub/
+├── memory_hub.py       # 核心类
+├── README.md
+├── .gitignore
+└── docs/               # 个人学习笔记（仅供参考学习）
+
+## 下一步计划
+
+- [ ] 实现 `find_messages` 关键词检索
+- [ ] 用 FastAPI 封装成 HTTP 服务
+- [ ] 引入向量数据库（Chroma）支持语义搜索
+- [ ] 开发酒馆扩展，与 Memory Hub 联动
+
+## 许可
+MIT License
+
