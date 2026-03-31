@@ -1,0 +1,27 @@
+{
+    // --- 通用编辑器设置 ---
+    "files.autoSave": "afterDelay",       // 延迟后自动保存文件[reference:0]
+    "editor.fontSize": 14,                // 调整编辑器字体大小[reference:1]
+    "editor.formatOnSave": true,          // 保存文件时自动格式化代码[reference:2]
+    "editor.rulers": [80, 120],           // 显示代码长度参考线[reference:3]
+    "editor.tabSize": 4,                  // 设置制表符宽度为4个空格[reference:4]
+    "editor.wordWrap": "on",              // 开启自动换行[reference:5]
+
+    // --- Python 专用设置 ---
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter", // 指定Python的格式化工具[reference:6]
+        "editor.formatOnSave": true,      // 针对Python文件保存时格式化[reference:7]
+        "editor.tabSize": 4               // Python文件缩进用4个空格
+    },
+    "python.languageServer": "Pylance",   // 使用Pylance作为语言服务器，提供更好的代码补全和类型检查[reference:8]
+    "python.analysis.typeCheckingMode": "basic", // 开启基础的类型检查模式[reference:9]
+    "python.analysis.autoImportCompletions": true, // 自动导入模块补全（你已添加的）
+    "python.analysis.completeFunctionParens": true, // 自动补全函数括号[reference:10]
+    "python.analysis.inlayHints.variableTypes": true, // 显示变量类型的行内提示
+    "python.analysis.inlayHints.functionReturnTypes": true, // 显示函数返回类型的行内提示
+
+    // --- 测试框架配置 (如果未来你想写测试) ---
+    "python.testing.pytestEnabled": true,  // 启用pytest测试框架[reference:11][reference:12]
+    "python.testing.unittestEnabled": false, // 禁用unittest框架[reference:13]
+    "python.testing.pytestArgs": ["tests"] // 指定pytest扫描的测试目录[reference:14]
+}
